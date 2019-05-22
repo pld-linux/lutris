@@ -1,11 +1,11 @@
 Summary:	Lutris – open source gaming platform for GNU/Linux
 Name:		lutris
-Version:	0.4.23
+Version:	0.5.1.2
 Release:	1
 License:	GPL v3
 Group:		Applications
 Source0:	https://lutris.net/releases/%{name}_%{version}.tar.xz
-# Source0-md5:	2300a2f6e617cf222aa47acd0b72436f
+# Source0-md5:	ed2795994bf78f05816076ed634959e8
 URL:		https://lutris.net/
 BuildRequires:	python3-modules
 BuildRequires:	python3-setuptools
@@ -60,13 +60,14 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS CHANGELOG README.rst
 %attr(755,root,root) %{_bindir}/lutris
-%{_datadir}/appdata/%{name}.appdata.xml
-%{_desktopdir}/%{name}.desktop
+%attr(755,root,root) %{_bindir}/lutris-wrapper
+%{_datadir}/metainfo/net.lutris.Lutris.appdata.xml
+%{_desktopdir}/net.lutris.Lutris.desktop
 %{_iconsdir}/hicolor/*/apps/%{name}.*
 %dir %{_datadir}/%{name}
 %dir %{_datadir}/%{name}/bin
 %attr(755,root,root) %{_datadir}/%{name}/bin/*
-%{_datadir}/%{name}/controllers
+%{_datadir}/%{name}/icons
 %{_datadir}/%{name}/media
 %{_datadir}/%{name}/ui
 %{_datadir}/polkit-1/actions/net.lutris.*.policy
