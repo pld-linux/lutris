@@ -1,7 +1,7 @@
 Summary:	Lutris – open source gaming platform for GNU/Linux
 Name:		lutris
 Version:	0.5.1.2
-Release:	4
+Release:	5
 License:	GPL v3
 Group:		Applications
 Source0:	https://lutris.net/releases/%{name}_%{version}.tar.xz
